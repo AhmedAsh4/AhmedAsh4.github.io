@@ -385,6 +385,7 @@ async function confirmorder(event) {
         (parseInt(expYear, 10) === currentYear && parseInt(expMonth, 10) < currentMonth)
     ) {
         errormessage.textContent = 'Card has expired.';
+        errormessage.style.display = 'block';
         return;
     }
 
