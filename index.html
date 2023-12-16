@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Aurora Store</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js" type="module"></script>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav>
+        <div class="navTop">
+            <div class="navItem" id="logo">
+                <img src="img/logo.jpg" alt="Aurora Logo">
+            </div>
+            <div class="navItem">
+                <span id="title">Aurora Watches</span>
+            </div>
+            <div class="navItem">
+                <span id="subtitle">Capture the Dance of Time</span>
+            </div>
+        </div>
+        <div class="navBottom">
+            <a class="menuItem TrackItem" target="_self" href="track.html">
+                <h3>Track Order</h3>
+            </a>
+            <a href="Grand.html" target="_self" class="menuItem">
+                <h3>Grand Complications</h3>
+            </a>
+            <a href="Calatrava.html" target="_self" class="menuItem">
+                <h3>Calatrava</h3>
+            </a>
+            <a href="Golden.html" target="_self" class="menuItem">
+                <h3>Golden Ellipse</h3>
+            </a>
+            <a href="Nautilus.html" target="_self" class="menuItem">
+                <h3>Nautilus</h3>
+            </a>
+            <a href="Aquanaut.html" target="_self" class="menuItem">
+                <h3>Aquanaut</h3>
+            </a>
+            <a class="menuItem cartIcon" target="_self">
+                <h3>Cart</h3>
+            </a>
+        </div>
+    </nav>
+
+    <div class="cart-overlay">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <div class="cart-display"></div>
+            <div class="total-price"></div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!--Slider for Watches-->
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <button class="sliderPrev" onclick="showSliderItem(5)"><img class="sliderArrow"
+                        src="img/arrow-left-solid.svg"></button>
+                <img src="img/Grand img1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">Grand <br>Complications</h1>
+                <h3 class="sliderPrice">$21,000</h1>
+                    <a href="Grand.html" target="_self"><button class="sliderButton">View</button></a>
+                    <button class="sliderNext" onclick="showSliderItem(2)"><img class="sliderArrow"
+                            src="img/arrow-right-solid.svg"></button>
+            </div>
+            <div class="sliderItem">
+                <button class="sliderPrev" onclick="showSliderItem(1)"><img class="sliderArrow"
+                        src="img/arrow-left-solid.svg"></button>
+                <img src="img/Cal img1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">Calatrava</h1>
+                <h3 class="sliderPrice">$18,000</h1>
+                    <a href="Calatrava.html" target="_self"><button class="sliderButton">View</button></a>
+                    <button class="sliderNext" onclick="showSliderItem(3)"><img class="sliderArrow"
+                            src="img/arrow-right-solid.svg"></button>
+            </div>
+            <div class="sliderItem">
+                <button class="sliderPrev" onclick="showSliderItem(2)"><img class="sliderArrow"
+                        src="img/arrow-left-solid.svg"></button>
+                <img src="img/Golden img1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">Golden <br> Ellipse</h1>
+                <h3 class="sliderPrice">$15,000</h1>
+                    <a href="Golden.html" target="_self"><button class="sliderButton">View</button></a>
+                    <button class="sliderNext" onclick="showSliderItem(4)"><img class="sliderArrow"
+                            src="img/arrow-right-solid.svg"></button>
+            </div>
+            <div class="sliderItem">
+                <button class="sliderPrev" onclick="showSliderItem(3)"><img class="sliderArrow"
+                        src="img/arrow-left-solid.svg"></button>
+                <img src="img/Naut img1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">Nautilus</h1>
+                <h3 class="sliderPrice">$19,000</h1>
+                    <a href="Nautilus.html" target="_self"><button class="sliderButton">View</button></a>
+                    <button class="sliderNext" onclick="showSliderItem(5)"><img class="sliderArrow"
+                            src="img/arrow-right-solid.svg"></button>
+            </div>
+            <div class="sliderItem">
+                <button class="sliderPrev" onclick="showSliderItem(4)"><img class="sliderArrow"
+                        src="img/arrow-left-solid.svg"></button>
+                <img src="img/Aqua img1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">Aquanaut</h1>
+                <h3 class="sliderPrice">$17,000</h1>
+                    <a href="Aquanaut.html" target="_self"><button class="sliderButton">View</button></a>
+                    <button class="sliderNext" onclick="showSliderItem(1)"><img class="sliderArrow"
+                            src="img/arrow-right-solid.svg"></button>
+            </div>
+        </div>
+    </div>
+
+    <!--About Us-->
+    <h3 class="originTitle">A Company Founded on Ideas</h3>
+
+    <div class="origins">
+        <div class="originStory">
+            <span class="originSubtitle">
+                Aurora Watches, a pinnacle in the realm of luxury timepieces, epitomizes elegance and precision in every
+                tick. With an illustrious heritage steeped in craftsmanship, each Aurora watch transcends the
+                conventional boundaries of horology, embodying a timeless fusion of artistry and engineering.
+                Meticulously handcrafted by master artisans, these watches are a testament to unparalleled dedication,
+                meticulously bringing to life the vision of sophistication.<br><br>
+
+                Embracing an ethos of exclusivity, Aurora curates an exquisite array of collections, each a symphony of
+                design and innovation. From the Grand Complications series, with its intricate complications and
+                impeccable detailing, to the Calatrava line exuding understated sophistication, each collection reflects
+                an unwavering commitment to excellence.<br><br>
+
+                The allure of Aurora Watches extends beyond their flawless mechanisms; it encapsulates a lifestyle, an
+                essence of refined taste and refined savoir-faire. Adorned by discerning connoisseurs and enthusiasts,
+                an Aurora timepiece is not merely an accessory but a statement—a symbol of achievement and
+                distinction.<br><br>
+
+                Envisioned for those who appreciate the finer nuances of luxury, Aurora Watches redefine opulence,
+                transcending trends to become timeless heirlooms. In a world dictated by fleeting moments, an Aurora
+                timepiece stands as a testament to enduring elegance, narrating stories of legacy and prestige with each
+                graceful second.</span>
+        </div>
+
+        <div class="founders">
+            <img class="foundersImg" src="img/Founders.jpg">
+        </div>
+    </div>
+
+    <!--Features offered-->
+    <div class="features">
+        <div class="feature">
+            <img class="featureImg" src="img/truck.svg">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureSubtitle">Free WorldWide Shipping on All Orders</span>
+        </div>
+
+        <div class="feature">
+            <img class="featureImg" src="img/return.svg">
+            <span class="featureTitle">14 DAY RETURN</span>
+            <span class="featureSubtitle">Easy return refund in 14 days. </span>
+        </div>
+
+        <div class="feature">
+            <img class="featureImg" src="img/contact.svg">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureSubtitle">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+    <div class="custom">
+        <h1 class="customTitle">Want a Custom Design?</h1>
+        <h2 class="customSubtitle">Let Us know and We'll Get in touch</h2>
+        <a href="custom.html"><button class="customButton">Showcase your Ideas</button></a>
+
+    </div>
+
+    <footer>
+        <div class="footerContent">
+            <div class="subscribeBox">
+                <h3 class="boxTitle">Subscribe to Our Newsletter</h3>
+                <form id="subscribeForm" onsubmit="addNewsletter(event)">
+                    <input class="boxInput" type="text" id="emailInput" placeholder="Enter your email">
+                    <button class="boxButton" type="submit">Subscribe</button>
+                </form>
+                <h4 id="submissonText"></h4>
+            </div>
+
+            <div class="contactInfo">
+                <h3 class="contactTitle">Contact Us</h3>
+                <div class="contactDetails">
+                    <p>Phone: +1 202-456-1111</p>
+                    <p>Email: support@aurorawatches.com</p>
+                </div>
+            </div>
+            <div class="socialLinks">
+                <h3 class="socialTitle">Follow Us</h3>
+                <div class="socialIcons">
+                    <a href="https://www.facebook.com/" target="_blank"><img class="socialIcon" src="img/facebook-f.svg"
+                            alt=""></a>
+                    <a href="https://twitter.com/" target="_blank"><img class="socialIcon" src="img/twitter.svg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="socialIcon" src="img/instagram.svg"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

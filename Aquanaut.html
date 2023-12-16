@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/Watches.css">
+    <title>Aurora Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="supa.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js" type="module"></script>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav>
+        <div class="navTop">
+            <div class="navItem" id="logo">
+                <img src="img/logo.jpg" alt="Aurora Logo">
+            </div>
+            <div class="navItem">
+                <span id="title">Aurora Watches</span>
+            </div>
+            <div class="navItem">
+                <span id="subtitle">Capture the Dance of Time</span>
+            </div>
+        </div>
+        <div class="navBottom">
+            <a class="menuItem TrackItem" target="_self" href="track.html">
+                <h3>Track Order</h3>
+            </a>
+            <a href="index.html" target="_self"  class="menuItem">
+                <h3>Home</h3>
+            </a>
+            <a href="Grand.html" target="_self"  class="menuItem">
+                <h3>Grand Complications</h3>
+            </a>
+            <a href="Calatrava.html" target="_self"  class="menuItem">
+                <h3>Calatrava</h3>
+            </a>
+            <a href="Golden.html" target="_self"  class="menuItem">
+                <h3>Golden Ellipse</h3>
+            </a>
+            <a href="Nautilus.html" target="_self"  class="menuItem">
+                <h3>Nautilus</h3>
+            </a>
+            <a class="menuItem cartIcon" target="_self">
+                <h3>Cart</h3>
+            </a>
+        </div>
+    </nav>
+
+    <div class="cart-overlay">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <div class="cart-display"></div>
+            <div class="total-price"></div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div class="showcase">
+        <h1 class="showcaseTitle">Aquanaut</h1>
+
+        <div class="card-item" onmouseover="changeTitle('Extraordinary');" onmouseout="changeTitle('Aquanaut');">
+            <div class="image">
+                <img src="img/Aqua img2.png" alt="">
+            </div>
+            <div class="description">
+                <h2>Extraordinary Rounded Octagonal Case</h2>
+                <span class="role">The Aquanaut showcases a unique rounded octagonal case design, crafted from stainless
+                    steel. Its sporty yet refined appearance, coupled with a combination of brushed and polished
+                    finishes, offers a contemporary take on luxury sports watches, echoing the iconic design language of
+                    the collection.</span>
+            </div>
+        </div>
+
+        <div class="card-item" onmouseover="changeTitle('Innovative');" onmouseout="changeTitle('Aquanaut');">
+            <div class="image">
+                <img src="img/Aqua img1.png" alt="">
+            </div>
+            <div class="description">
+                <h2>Innovative Dial with Embossed Patterns</h2>
+                <span class="role">The dial of the Stainless Steel Aquanaut is designed for optimal legibility. Its
+                    embossed pattern, reminiscent of the Aquanaut's iconic texture, harmonizes with the strap. The
+                    luminous hands and Arabic numerals ensure easy readability in various lighting conditions.</span>
+            </div>
+        </div>
+
+        <div class="card-item" onmouseover="changeTitle('Textured');" onmouseout="changeTitle('Aquanaut');">
+            <div class="image">
+                <img src="img/Aqua img3.png" alt="">
+            </div>
+            <div class="description">
+                <h2>Textured "Tropical" Strap and Clasp</h2>
+                <span class="role">The watch features the signature "Tropical" strap, made from a high-tech composite
+                    material that's resistant to wear, water, and UV radiation. The embossed texture resembles the
+                    pattern of the dial, creating a seamless aesthetic. The deployant clasp ensures a secure and
+                    comfortable fit on the wrist.</span>
+            </div>
+        </div>
+        <h3 class="showcasePrice">$17,000</h3>
+
+        <div class="buyButton">
+            <button class="buyButton2" data-name="Aquanaut" data-price="17000">Add to Cart</button>
+            <p class="addedText" style="display: none;"> Added To Cart</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContent">
+            <div class="subscribeBox">
+                <h3 class="boxTitle">Subscribe to Our Newsletter</h3>
+                <form id="subscribeForm" onsubmit="addNewsletter(event)">
+                    <input class="boxInput" type="text" id="emailInput" placeholder="Enter your email">
+                    <button class="boxButton" type="submit">Subscribe</button>
+                </form>
+                <h4 id="submissonText"></h4>
+            </div>
+            <div class="contactInfo">
+                <h3 class="contactTitle">Contact Us</h3>
+                <div class="contactDetails">
+                    <p>Phone: +1 202-456-1111</p>
+                    <p>Email: support@aurorawatches.com</p>
+                </div>
+            </div>
+            <div class="socialLinks">
+                <h3 class="socialTitle">Follow Us</h3>
+                <div class="socialIcons">
+                    <a href="https://www.facebook.com/" target="_blank"><img class="socialIcon" src="img/facebook-f.svg"
+                            alt=""></a>
+                    <a href="https://twitter.com/" target="_blank"><img class="socialIcon" src="img/twitter.svg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="socialIcon" src="img/instagram.svg"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

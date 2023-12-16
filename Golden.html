@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/Watches.css">
+    <title>Aurora Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="supa.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js" type="module"></script>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav>
+        <div class="navTop">
+            <div class="navItem" id="logo">
+                <img src="img/logo.jpg" alt="Aurora Logo">
+            </div>
+            <div class="navItem">
+                <span id="title">Aurora Watches</span>
+            </div>
+            <div class="navItem">
+                <span id="subtitle">Capture the Dance of Time</span>
+            </div>
+        </div>
+        <div class="navBottom">
+            <a class="menuItem TrackItem" target="_self" href="track.html">
+                <h3>Track Order</h3>
+            </a>
+            <a href="index.html" target="_self" class="menuItem">
+                <h3>Home</h3>
+            </a>
+            <a href="Grand.html" target="_self" class="menuItem">
+                <h3>Grand Complications</h3>
+            </a>
+            <a href="Calatrava.html" target="_self" class="menuItem">
+                <h3>Calatrava</h3>
+            </a>
+            <a href="Nautilus.html" target="_self" class="menuItem">
+                <h3>Nautilus</h3>
+            </a>
+            <a href="Aquanaut.html" target="_self" class="menuItem">
+                <h3>Aquanaut</h3>
+            </a>
+            <a class="menuItem cartIcon" target="_self">
+                <h3>Cart</h3>
+            </a>
+        </div>
+    </nav>
+
+    <div class="cart-overlay">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <div class="cart-display"></div>
+            <div class="total-price"></div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div class="showcase">
+        <h1 class="showcaseTitle">Golden Ellipse</h1>
+
+        <div class="card-item" onmouseover="changeTitle('Distinct');" onmouseout="changeTitle('Golden Ellipse');">
+            <div class="image">
+                <img src="img/Golden img2.png" alt="">
+            </div>
+            <div class="description">
+                <h2>Distinctive Elliptical Case Design</h2>
+                <span class="role">The defining feature of this watch is its iconic elliptical case crafted from
+                    luxurious rose gold. The harmonious proportions and graceful curves of the case create a unique and
+                    timeless silhouette, setting it apart from traditional watch designs.</span>
+            </div>
+        </div>
+
+        <div class="card-item" onmouseover="changeTitle('Precious');" onmouseout="changeTitle('Golden Ellipse');">
+            <div class="image">
+                <img src="img/Golden img1.png" alt="">
+            </div>
+            <div class="description">
+                <h2>Precious Materials and Craftsmanship</h2>
+                <span class="role">Crafted from luxurious rose gold, a precious metal renowned for its beauty and
+                    rarity, the watch showcases not only opulence but also the expertise of Aurora Watches' master
+                    artisans. The meticulous attention to detail, from the case to the movement finishing, reflects the
+                    brand's uncompromising commitment to luxury and excellence.</span>
+            </div>
+        </div>
+
+        <div class="card-item" onmouseover="changeTitle('Precise');" onmouseout="changeTitle('Golden Ellipse');">
+            <div class="image">
+                <img src="img/Golden img3.png" alt="">
+            </div>
+            <div class="description">
+                <h2>Precision Caliber 240 Movement</h2>
+                <span class="role">Housing the caliber 240 movement, renowned for its reliability and precision, this
+                    watch exemplifies exceptional craftsmanship. The ultra-thin automatic movement ensures accurate
+                    timekeeping while maintaining the watch's slim and refined profile.</span>
+            </div>
+        </div>
+
+        <h3 class="showcasePrice">$15,000</h3>
+
+        <div class="buyButton">
+            <button class="buyButton2" data-name="Golden Ellipse" data-price="15000">Add to Cart</button>
+            <p class="addedText" style="display: none;"> Added To Cart</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContent">
+            <div class="subscribeBox">
+                <h3 class="boxTitle">Subscribe to Our Newsletter</h3>
+                <form id="subscribeForm" onsubmit="addNewsletter(event)">
+                    <input class="boxInput" type="text" id="emailInput" placeholder="Enter your email">
+                    <button class="boxButton" type="submit">Subscribe</button>
+                </form>
+                <h4 id="submissonText"></h4>
+            </div>
+            <div class="contactInfo">
+                <h3 class="contactTitle">Contact Us</h3>
+                <div class="contactDetails">
+                    <p>Phone: +1 202-456-1111</p>
+                    <p>Email: support@aurorawatches.com</p>
+                </div>
+            </div>
+            <div class="socialLinks">
+                <h3 class="socialTitle">Follow Us</h3>
+                <div class="socialIcons">
+                    <a href="https://www.facebook.com/" target="_blank"><img class="socialIcon" src="img/facebook-f.svg"
+                            alt=""></a>
+                    <a href="https://twitter.com/" target="_blank"><img class="socialIcon" src="img/twitter.svg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="socialIcon" src="img/instagram.svg"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

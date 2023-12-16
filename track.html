@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/track.css">
+    <title>Aurora Store</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="supa.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js" type="module"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navTop">
+            <div class="navItem" id="logo">
+                <img src="img/logo.jpg" alt="Aurora Logo">
+            </div>
+            <div class="navItem">
+                <span id="title">Aurora Watches</span>
+            </div>
+            <div class="navItem">
+                <span id="subtitle">Capture the Dance of Time</span>
+            </div>
+        </div>
+        <div class="navBottom">
+            <a href="index.html" target="_self" class="menuItem">
+                <h3>Home</h3>
+            </a>
+            <a href="Grand.html" target="_self" class="menuItem">
+                <h3>Grand Complications</h3>
+            </a>
+            <a href="Calatrava.html" target="_self" class="menuItem">
+                <h3>Calatrava</h3>
+            </a>
+            <a href="Golden.html" target="_self" class="menuItem">
+                <h3>Golden Ellipse</h3>
+            </a>
+            <a href="Nautilus.html" target="_self" class="menuItem">
+                <h3>Nautilus</h3>
+            </a>
+            <a href="Aquanaut.html" target="_self" class="menuItem">
+                <h3>Aquanaut</h3>
+            </a>
+            <a class="menuItem cartIcon" target="_self">
+                <h3>Cart</h3>
+            </a>
+        </div>
+    </nav>
+
+    <div class="cart-overlay">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <div class="cart-display"></div>
+            <div class="total-price"></div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div class="trackContainer">
+        <form class="trackForm" onsubmit="trackOrder(event)">
+            <h3 class="boxTitle">Tell us your Order Number</h3>
+            <input type="number" id="orderNumber" name="orderNumber" class="boxInput" placeholder="Please enter your order number" required></textarea>
+            <button class="boxButton" type="submit">Submit</button>
+        </form>
+        <p class="trackText" style="display: none;">lol</p>
+    </div>
+
+    <footer>
+        <div class="footerContent">
+            <div class="subscribeBox">
+                <h3 class="boxTitle">Subscribe to Our Newsletter</h3>
+                <form id="subscribeForm" onsubmit="addNewsletter(event)">
+                    <input class="boxInput" type="text" id="emailInput" placeholder="Enter your email">
+                    <button class="boxButton" type="submit">Subscribe</button>
+                </form>
+                <h4 id="submissonText"></h4>
+            </div>
+
+            <div class="contactInfo">
+                <h3 class="contactTitle">Contact Us</h3>
+                <div class="contactDetails">
+                    <p>Phone: +1 202-456-1111</p>
+                    <p>Email: support@aurorawatches.com</p>
+                </div>
+            </div>
+            <div class="socialLinks">
+                <h3 class="socialTitle">Follow Us</h3>
+                <div class="socialIcons">
+                    <a href="https://www.facebook.com/" target="_blank"><img class="socialIcon" src="img/facebook-f.svg"
+                            alt=""></a>
+                    <a href="https://twitter.com/" target="_blank"><img class="socialIcon" src="img/twitter.svg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="socialIcon" src="img/instagram.svg"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

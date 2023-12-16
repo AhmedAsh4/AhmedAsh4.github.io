@@ -1,0 +1,496 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4ebd0;
+}
+
+a {
+    all: unset;
+}
+
+nav {
+    background-color: #122620;
+    color: #f4ebd0;
+    padding: 20px 50px;
+}
+
+.navTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    width: 100px;
+    height: 100px;
+}
+
+#title {
+    font-size: 40px;
+    margin-left: 40px;
+    font-weight: 1000;
+}
+
+#subtitle {
+    font-size: 20px;
+}
+
+.navBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menuItem:hover {
+    background-color: #D6AD60;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 0 8px #D6AD60;
+}
+
+.menuItem.cartIcon {
+    position: absolute;
+    right: 0;
+}
+
+.menuItem.TrackItem {
+    position: absolute;
+    left: 0;
+}
+
+.slider {
+    background: url('../img/sliderwallpaper.jpg');
+    overflow: hidden;
+}
+
+.sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1.5s ease-in-out;
+}
+
+.sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sliderBg {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.sliderImg {
+    z-index: 1;
+}
+
+.sliderPrice {
+    position: absolute;
+    top: 60%;
+    right: 22%;
+    color: #D6AD60;
+    font-size: 40px;
+    text-align: center;
+    z-index: 1;
+}
+
+.sliderButton {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    color: #D6AD60;
+    font-size: 40px;
+    text-align: center;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.sliderNext {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: #D6AD60;
+    text-align: center;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sliderPrev {
+    position: absolute;
+    top: 50%;
+    right: 90%;
+    color: #D6AD60;
+    text-align: center;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sliderArrow {
+    width: 50px;
+    height: 50px;
+}
+
+.sliderButton:hover {
+    color: white;
+    background-color: #D6AD60;
+    border-radius: 8px;
+}
+
+.sliderNext:hover {
+    color: white;
+    background-color: #D6AD60;
+    border-radius: 8px;
+}
+
+.sliderPrev:hover {
+    color: white;
+    background-color: #D6AD60;
+    border-radius: 8px;
+}
+
+.sliderItem:nth-child(1) .sliderBg {
+    background-color: #fee2c7;
+}
+
+.sliderItem:nth-child(1) .sliderTitle {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    color: #D6AD60;
+    font-size: 40px;
+    text-align: left;
+    z-index: 1;
+}
+
+.sliderItem:nth-child(2) .sliderBg {
+    background-color: #2e5977;
+}
+
+.sliderItem:nth-child(2) .sliderTitle {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    color: #D6AD60;
+    font-size: 40px;
+    text-align: left;
+    z-index: 1;
+}
+
+.sliderItem:nth-child(3) .sliderBg {
+    background-color: #f7d6b7;
+}
+
+.sliderItem:nth-child(3) .sliderTitle {
+    position: absolute;
+    top: 30%;
+    right: 22%;
+    color: #D6AD60;
+    font-size: 40px;
+    text-align: left;
+    z-index: 1;
+}
+
+.sliderItem:nth-child(4) .sliderBg {
+    background-color: #2f4f73;
+}
+
+.sliderItem:nth-child(4) .sliderTitle {
+    position: absolute;
+    top: 30%;
+    right: 21%;
+    color: #D6AD60;
+    font-size: 40px;
+    text-align: center;
+    z-index: 1;
+}
+
+.sliderItem:nth-child(5) .sliderBg {
+    background-color: #2f3332;
+}
+
+.sliderItem:nth-child(5) .sliderTitle {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    color: #D6AD60;
+    font-size: 40px;
+    text-align: center;
+    z-index: 1;
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: #D6AD60;
+    background: url('../img/sliderwallpaper.jpg');
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.featureTitle {
+    font-size: 25px;
+    margin: 20px;
+}
+
+.featureImg {
+    width: 50px;
+    height: 50px;
+}
+
+.origins {
+    display: flex;
+    padding-top: 5px;
+}
+
+.originStory {
+    flex: 1;
+    padding: 20px;
+    color: #122620;
+}
+
+.originTitle {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.originSubtitle {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.founders {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foundersImg {
+    border-radius: 8px;
+}
+
+.custom {
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #122620;
+}
+
+.customTitle {
+    font-size: 55px;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.customsubTitle {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.customButton {
+    padding: 10px 20px;
+    background-color: #D6AD60;
+    color: #122620;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.customButton:hover {
+    background-color: #122620;
+    color: #D6AD60;
+}
+
+footer {
+    background-color: #122620;
+    padding: 20px;
+    text-align: center;
+    color: #D6AD60;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribeBox,
+.socialLinks {
+    flex: 1;
+    max-width: 45%;
+}
+
+.boxTitle {
+    margin-bottom: 10px;
+}
+
+.boxInput {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.boxButton {
+    padding: 8px 20px;
+    background-color: #D6AD60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.socialIcons {
+    margin-right: 10px;
+}
+
+.socialIcon {
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.contactInfo {
+    margin-left: 60px;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.cart-overlay .cart-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.cart-overlay .close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-overlay .checkout-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #D6AD60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 120px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name,
+.item-price,
+.item-count {
+    margin-bottom: 5px;
+    color: #122620;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.add-quantity {
+    background-color: #D6AD60;
+    color: #122620;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-left: auto;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 2px;
+    margin-top: 6px;
+}
+
+.add-quantity:hover {
+    background-color: white;
+    color: #D6AD60;
+}
+
+.remove-item {
+    background-color: #D6AD60;
+    color: #122620;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: white;
+    color: #D6AD60;
+}
+
+.total-price {
+    text-align: center;
+    font-size: 20px;
+}
